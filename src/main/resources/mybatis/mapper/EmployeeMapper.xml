@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzdz.shardingjdbc.dao.EmployeeDao">
+    <!--    Employee findById(Long id);-->
+    <select id="findById" resultType="com.zzdz.shardingjdbc.entity.Employee">
+        select * from employee where id = #{id}
+    </select>
+
+<!--    boolean save(Employee employee);-->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        insert into employee(nick_name, age, salary, add_time)
+        value (#{nickName}, #{age}, #{salary}, #{addTime})
+    </insert>
+
+</mapper>

@@ -21,7 +21,7 @@ import java.util.Map;
  * @Date 2019/7/3 9:37
  * @Created by joe
  */
-//@Configuration
+@Configuration
 public class DruidConfig {
     //配置Druid的监控
     //1、配置一个管理后台的Servlet
